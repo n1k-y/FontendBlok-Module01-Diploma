@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+:root {
+    --dark: #2B3541;
+    --light: #f3f3f3;
+    --yellow: #FBF138;
+
+    --regular: 'Montserrat Regular';
+    --bold: 'Montserrat Bold';
+
+    --tr: .2s;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--regular);
+    line-height: 150%;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 29px;
+}
+
+.header {
+    display: flex;
+    gap: 93px;
+}
+
+.logo {
+    display: block;
+    background-image: url(../img/logo.svg);
+    width: 97px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 54px;
+    margin-top: 4px;
+}
+
+.nav-link {
+    color: var(--dark);
+    font-size: 18px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: var(--tr);
+    position: absolute;
+    bottom: -4px;
+}
+
+.nav-link:hover::after {
+    background-color: var(--dark);
+}
+
+.email {
+    font-family: var(--bold);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: var(--dark);
+    position: relative;
+    margin-top: 4px;
+}
+
+.email::before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: -1px;
+    left: -14px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+/* hero */
+
+.hero {
+    display: flex;
+    gap: 2.75rem;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    flex-basis: calc(100% - 2.75rem);
+    margin-left: 1px;
+    margin-top: -13px;
+}
+
+.hero-bg {
+    background: linear-gradient(90deg, var(--yellow) 0%, rgba(253, 249, 182, 0.45) 100%);
+    opacity: 0.2;
+    width: 70%;
+    height: clamp(493px, 50vw, 848px);
+}
+
+.hero-bg2 {
+    position: absolute;
+    bottom: 0;
+    right: -172px;
+    max-width: clamp(399px, 52vw, 996px);
+}
+
+.hero-title {
+    font-family: var(--bold);
+    font-weight: 700;
+    font-size: clamp(26px, 2.5vw, 48px);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin: 0;
+    margin-bottom: 43px;
+}
+
+.hero-bread {
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 40px);
+    line-height: 125%;
+    color: var(--dark);
+}
+
+.hero-bread span {
+    margin-left: 21px;
+}
+
+.hero-disc {
+    margin-left: 91px;
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 18px);;
+    line-height: 150%;
+    color: var(--dark);
+    margin-top: 20px;
+}
+
+.hero-btn {
+    margin-left: 91px;
+    margin-top: 35px;
+    display: block;
+    width: 252px;
+    border: none;
+    background-color: var(--yellow);
+    padding: 22px 0 18px 0;
+    transition: var(--tr);
+    font-family: var(--bold);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark);
+    box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
+    background: var(--yellow);
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: var(--dark);
+    color: var(--yellow);
+    box-shadow: 0 13px 24px 0 rgba(70, 86, 106, 0.2);
+    background: var(--dark);
+}
+
+/* Media */
+
+@media (max-width: 1440px) {
+    .hero-bg {
+        width: 90%;
+    }
+    .hero-bg2 {
+        right: -70px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .hero-title {
+        width: 420px;
+    }
+    .hero-bg2 {
+        right: 10px;
+    }
+    .hero-disc {
+        margin-left: 1px;
+    }
+    .hero-btn {
+        margin-left: 1px;
+    }
+    .header {
+        gap: 60px;
+    }
+    .nav {
+        gap: 15px;
+    }
+}
