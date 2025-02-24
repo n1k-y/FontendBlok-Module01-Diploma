@@ -247,6 +247,7 @@ a {
     grid-template-rows: 309px 72px 282px;
     grid-template-areas: "a b c" "d b f" "d e f";
     gap: 20px;
+    margin-bottom: 162px;
 }
 
 .menu-item {
@@ -331,6 +332,202 @@ a {
     bottom: 0;
     left: 30px;
     margin-top: 15px;
+}
+
+/* Subscribe */
+
+.subscribe {
+    background-color: var(--light);
+    position: relative;
+}
+
+.sub-title {
+    font-family: var(--bold);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    color: var(--dark);
+    margin: 0;
+    margin-bottom: 39px;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 8px;
+    z-index: 1;
+    position: relative;
+}
+
+.sub-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 245px;
+    top: 62px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.sub-form {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 80px;
+    justify-content: space-between;
+    padding-left: 27px;
+}
+
+.sub-form > div {
+    flex-basis: calc(100% - 225px - 20px);
+}
+
+.sub-email {
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--dark);
+    border: none;
+    padding: 20px 0 18px 19px;
+    width: calc(100% - 20px);
+    margin-bottom: 9px;
+}
+
+.sub-email::placeholder {
+    opacity: 0.3;
+}
+
+.sub-email:focus {
+    outline-color: var(--yellow);
+}
+
+.sub-email:invalid {
+    outline-color: #AE0303;
+}
+
+.sub-label {
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    color: rgba(var(--dark-rgb),0.5);
+}
+
+.sub-label > a {
+    color: rgba(var(--dark-rgb),0.5);
+}
+
+.sub-label > a:hover {
+    color: var(--dark);
+}
+ 
+.sub-btn {
+    display: block;
+    border: none;
+    background-color: var(--yellow);
+    padding: 22px 0 18px 0;
+    transition: var(--tr);
+    font-family: var(--bold);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark);
+    box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
+    cursor: pointer;
+    flex-basis: 225px;
+    margin-bottom: 33px;
+    margin-right: 3px;
+}
+
+.sub-btn:hover {
+    background-color: var(--dark);
+    color: var(--yellow);
+    box-shadow: 0 13px 24px 0 rgba(70, 86, 106, 0.2);
+    background: var(--dark);
+}
+
+.checkbox:checked,
+.checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+    position: relative;
+    padding-left: 23px;
+    cursor: pointer;
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+
+.checkbox:checked + label::before {
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: calc(50% - 9px);
+    border: 2px solid;
+    border-color: var(--dark);
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт активен */
+
+.checkbox:checked + label::after {
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 1px;
+    top: calc(50% - 7px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/check_box.svg);
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+
+.checkbox:not(:checked) + label::before {
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: calc(50% - 9px);
+    border: 2px solid;
+    border-color: var(--dark);
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+
+.checkbox:not(:checked) + label::after {
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-position: 0 -12px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/icons/check-box-empty.svg);
+}
+
+.radio:checked + label::before {
+    border-radius: 100%;
 }
 
 /* Media */
