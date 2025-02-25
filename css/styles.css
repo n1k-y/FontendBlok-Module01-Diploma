@@ -45,7 +45,7 @@ a {
 .header-wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 43px;
     padding-bottom: 29px;
 }
 
@@ -605,7 +605,7 @@ a {
 }
 
 .about-bg {
-    background-image: url(../img/files/@2x/trainer@2x.png);
+    background-image: url(../img/trainer.png);
     width: 52%;
     height: 336px;
     background-repeat: no-repeat;
@@ -829,7 +829,7 @@ a {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 7px 0 19px;
+        padding: 0 0px 0 10px
     }
     .email {
         margin-top: 2px;
@@ -848,7 +848,7 @@ a {
         display: block;
     }
     .header-wrapper {
-        padding: 35px 0 41px 0;
+        padding: 28px 0 41px 0;
     }
     .hero {
         align-items: normal;
@@ -1032,10 +1032,10 @@ a {
 
 @media (max-width: 550px) {
     .container {
-        padding: 0 6px 0 23px;
+        padding: 0 0px 0 16px
     }
     .header-wrapper {
-        padding: 31px 0 41px 0;
+        padding: 22px 0 41px 0;
     }
     .logo {
         width: 78px;
@@ -1074,7 +1074,7 @@ a {
         grid-template-areas: "a" "d" "b" "e" "c" "f";
         grid-template-rows: repeat(6, 114px);
         margin-left: 1px;
-        margin-bottom: 108px;
+        margin-bottom: 109px;
     }
     .menu-item {
         border: 1px solid rgba(var(--dark-rgb), 0.5);
