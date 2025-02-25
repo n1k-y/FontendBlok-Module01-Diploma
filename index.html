@@ -14,6 +14,7 @@
             <div class="header-wrapper">
                 <div class="header">
                     <div class="logo"></div>
+                    <button class="button-burger" onclick="openModal()"></button>
                     <nav class="nav">
                         <a href="#" class="nav-link">Мероприятия</a>
                         <a href="#" class="nav-link">Расписание</a>
@@ -30,7 +31,7 @@
                 <div class="hero-content">
                     <h1 class="hero-title">Онлайн тренировки любой сложности</h1>
                     <span class="hero-bread">&gt;&nbsp;15<span>тренировок</span></span>
-                    <p class="disc hero">в области спортивной<br>физиологии и нутрициологии</p>
+                    <p class="disc disc-hero">в области спортивной<br>физиологии и нутрициологии</p>
                     <button class="btn hero" type="button">Узнать подробнее</button>
                 </div>
                 <div class="hero-bg"></div>
@@ -140,11 +141,25 @@
                 </div>
                 <div class="footer-item copy">
                     <p class="disc disc-footer">&copy; 2022, Все права защищены</p>
-                    <p class="disc disc-footer">Сделано в рамках курса учебной платформы <a href="_blank">Frontend Blok</a></p>
+                    <p class="disc disc-footer">Сделано в рамках курса учебной платформы <a href="https://frontendblok.com/">Frontend Blok</a></p>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="modal" id="modal" >
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="logo logo-modal"></div>
+                <button class="modal-close" onclick="closeModal()"></button>
+            </div>
+            <div class="modal-nav">
+                <a href="#" class="modal-link">Мероприятия</a>
+                <a href="#" class="modal-link">Расписание</a>
+                <a href="#" class="modal-link">О компании</a>
+            </div>
+        </div>
+        <div class="modal-footer"></div>
+    </div>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
