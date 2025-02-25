@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Montserrat Regular';
-    src: url(../fonts/Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'Montserrat Bold';
-    src: url(../fonts/Montserrat-Bold.ttf);
+    src: url(../fonts/Montserrat-Bold.woff2) format('woff2');
 }
 
 :root {
@@ -165,8 +165,7 @@ a {
     margin-left: 21px;
 }
 
-.hero-disc {
-    margin-left: 91px;
+.disc {
     font-weight: 400;
     font-size: clamp(16px, 3vw, 18px);;
     line-height: 150%;
@@ -174,9 +173,16 @@ a {
     margin-top: 20px;
 }
 
-.hero-btn {
+.disc.hero {
+    margin-left: 91px;
+}
+
+.btn.hero {
     margin-left: 91px;
     margin-top: 35px;
+}
+
+.btn {
     display: block;
     width: 252px;
     border: none;
@@ -196,7 +202,7 @@ a {
     cursor: pointer;
 }
 
-.hero-btn:hover {
+.btn:hover {
     background-color: var(--dark);
     color: var(--yellow);
     box-shadow: 0 13px 24px 0 rgba(70, 86, 106, 0.2);
@@ -222,7 +228,7 @@ a {
     margin-top: 160px;
 }
 
-.menu-title {
+.title {
     font-family: var(--bold);
     font-weight: 700;
     font-size: 40px;
@@ -328,10 +334,13 @@ a {
     font-size: 18px;
     line-height: 125%;
     color: var(--dark);
-    position: absolute;
     bottom: 0;
     left: 30px;
     margin-top: 15px;
+}
+
+.item-name.box-name {
+    position: absolute;
 }
 
 /* Subscribe */
@@ -339,36 +348,14 @@ a {
 .subscribe {
     background-color: var(--light);
     position: relative;
+    z-index: 2;
 }
 
-.sub-title {
-    font-family: var(--bold);
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 125%;
-    color: var(--dark);
-    margin: 0;
-    margin-bottom: 39px;
+.title.sub {
     text-align: center;
     padding-top: 80px;
     padding-left: 8px;
     z-index: 1;
-    position: relative;
-}
-
-.sub-title::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 245px;
-    top: 62px;
-    background-color: var(--yellow);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 53px;
-    height: 53px;
-    border-radius: 100%;
-    z-index: -1;
 }
 
 .sub-form {
@@ -379,6 +366,22 @@ a {
     padding-bottom: 80px;
     justify-content: space-between;
     padding-left: 27px;
+    position: relative;
+}
+
+.sub-form::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: -106px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    z-index: -1;
 }
 
 .sub-form > div {
@@ -419,38 +422,17 @@ a {
 
 .sub-label > a {
     color: rgba(var(--dark-rgb),0.5);
+    text-decoration: underline;
 }
 
 .sub-label > a:hover {
     color: var(--dark);
 }
  
-.sub-btn {
-    display: block;
-    border: none;
-    background-color: var(--yellow);
-    padding: 22px 0 18px 0;
-    transition: var(--tr);
-    font-family: var(--bold);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--dark);
-    box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
-    cursor: pointer;
+.btn.sub{
     flex-basis: 225px;
     margin-bottom: 33px;
     margin-right: 3px;
-}
-
-.sub-btn:hover {
-    background-color: var(--dark);
-    color: var(--yellow);
-    box-shadow: 0 13px 24px 0 rgba(70, 86, 106, 0.2);
-    background: var(--dark);
 }
 
 .checkbox:checked,
@@ -530,6 +512,175 @@ a {
     border-radius: 100%;
 }
 
+/* About */
+
+.about-wrapper {
+    display: flex;
+    padding-top: 160px;
+    gap: 77px;
+    margin-left: 1px;
+}
+
+.about-bg {
+    background-image: url(../img/files/@2x/trainer@2x.png);
+    width: 52%;
+    height: 336px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.about-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fbf138 0%, rgba(253, 249, 182, 0.45) 100%);
+    opacity: 0.3;
+}
+
+.about-text {
+    width: calc(50% - 77px);
+}
+
+.title.about {
+    margin: 0 0 20px 0;
+}
+
+.disc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--dark);
+}
+
+.disc.add {
+    opacity: 0.6;
+    margin-left: 1px;
+}
+
+.btn.about {
+    margin-top: 33px;
+    width: 225px;
+}
+
+.about-add {
+    display: flex;
+    margin-top: 66px;
+    gap: 67px;
+    justify-content: space-between;
+}
+
+.add-wrapper:first-child {
+    max-width: 232px;
+}
+
+.add-wrapper:nth-child(2) {
+    max-width: 283px;
+}
+
+.add-wrapper:nth-child(3) {
+    max-width: 220px;
+}
+
+.add-wrapper:last-child {
+    max-width: 203px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--light);
+    margin-top: 151px;
+    padding-bottom: 25px;
+}
+
+.footer-item {
+    display: flex;
+    gap: 75px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 49px;
+    padding-bottom: 25px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 91px;
+    margin-top: 4px;
+}
+
+.footer-link {
+    color: var(--dark);
+    font-size: 14px;
+    position: relative;
+}
+
+.footer-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: var(--tr);
+    position: absolute;
+    bottom: -2px;
+}
+
+.footer-link:hover::after {
+    background-color: var(--dark);
+}
+.email.email-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.email.email-footer::before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: -1px;
+    left: -14px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.footer-item.copy {
+    justify-content: space-between;
+    margin-left: 1px;
+}
+
+.disc.disc-footer{
+    font-size: 14px;
+    color: rgba(var(--dark-rgb), 0.3);
+    margin: 0 -2px 0 0;
+}
+.disc.disc-footer:first-child{
+    margin-top: 5px;
+}
+
+.disc.disc-footer > a {
+    font-size: 14px;
+    color: rgba(var(--dark-rgb),0.3);
+    text-decoration: underline;
+}
+
+.disc.disc-footer > a:hover {
+    color: var(--dark);
+}
+
 /* Media */
 
 @media (max-width: 1440px) {
@@ -548,10 +699,10 @@ a {
     .hero-bg2 {
         right: 10px;
     }
-    .hero-disc {
+    .disc.hero {
         margin-left: 1px;
     }
-    .hero-btn {
+    .btn.hero {
         margin-left: 1px;
     }
     .header {
@@ -560,12 +711,186 @@ a {
     .nav {
         gap: 15px;
     }
+    .about-add {
+        gap: 10px;
+    }
+    .footer-nav {
+        gap: 35px;
+    }
+    .item-name {
+        font-size: 16px;
+        bottom: 1px;
+        left: 23px;
+    }
 }
 
 @media (max-width: 960px) {
     .menu-box {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 224px);
-    grid-template-areas: "a b" "c d" "e f";
+    grid-template-areas: "a d" "b e" "c f";
+    }
+    .about-wrapper {
+        gap: 40px;
+    }
+    .about-text {
+        width: calc(50% - 40px);
+    }
+    .disc.disc-footer {
+        font-size: 13px;
+    }
+    .disc.disc-footer > a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 7px 0 19px;
+    }
+    .email {
+        margin-top: 2px;
+    }
+    .email::before {
+        left: -16px;
+    }
+    
+    
+    .nav {
+        display: none;
+    }
+    .header-wrapper {
+        padding: 35px 0 41px 0;
+    }
+    .hero {
+        align-items: normal;
+    }
+    .hero-bg2 {
+        right: 6px;
+    }
+    .hero-content {
+        margin-left: 5px;
+        margin-top: 31px;
+    }
+    .disc {
+        font-size: 16px;
+        margin-top: 17px;
+    }
+    .disc.hero {
+        margin-left: 0px;
+    }
+    .btn.hero {
+        margin-top: 41px;
+    }
+    .btnto-menu {
+        width: 40px;
+        height: 40px;
+        bottom: 65px;
+        left: 6px;
+    }
+    .menu-header {
+        margin: 67px 2px 0 5px;
+    }
+    .title {
+        margin-bottom: 36px;
+    }
+    .menu-box {
+        margin-left: 5px;
+        gap: 20px 10px;
+    }
+    .item-icon {
+        bottom: 75px;
+        left: 23px;
+    }
+    .item-date {
+        font-size: 16px;
+        right: 23px;
+        top: 20px;
+    }
+    .title.sub {
+        padding-top: 16px;
+    }
+    .about-wrapper {
+        padding-top: 94px;
+    }
+    .about-bg {
+        background-image: url(../img/files/@1x/trainer.png);
+        width: 53%;
+        height: 357px;
+    }
+    .about-text {
+        margin-left: 4px;
+        width: calc(49% - 40px);
+    }
+    .disc.about {
+        font-size: 18px;
+    }
+    .btn.about {
+        width: 214px;
+        margin-top: 32px;
+    }
+    .about-add {
+        margin: 20px 34px 0 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 5px 10px;
+    }
+    .add-wrapper:first-child {
+        max-width: 65%;
+    }
+    
+    .add-wrapper:nth-child(2) {
+        max-width: 75%;
+    }
+    
+    .add-wrapper:nth-child(3) {
+        max-width: 70%;
+    }
+    
+    .add-wrapper:last-child {
+        max-width: 70%;
+    }
+    .item-name.add {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .disc.add {
+        margin: 13px 0 21px 0;
+    }
+    .footer {
+        margin-top: 55px;
+        padding: 0;
+    }
+    .footer-wrapper {
+        padding: 0;
+    }
+    .footer-mobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 20px 0;
+    }
+    .email.email-footer {
+        display: none;
+    }
+    .footer-nav {
+        display: none;
+    }
+    .disc.disc-footer:first-child {
+        display: none;
+    }
+    .disc.disc-footer {
+        font-size: 10px;
+        margin: 8px 0 0 0;
+        padding: 0 0 0 1px;
+    }
+    .disc.disc-footer > a {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    .logo.logo-footer {
+        margin: 0 0 0 5px;
+        padding: 0;
     }
 }
