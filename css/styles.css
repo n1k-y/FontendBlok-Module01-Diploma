@@ -327,7 +327,7 @@ a {
     font-size: 28px;
     line-height: 125%;
     color: var(--dark);
-    margin: 0 -3px 0 0;
+    margin: 0;
 }
 
 .menu-box {
@@ -811,7 +811,7 @@ a {
 @media (max-width: 960px) {
     .menu-box {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 224px);
+    grid-template-rows: repeat(3, 225px);
     grid-template-areas: "a d" "b e" "c f";
     }
     .about-wrapper {
@@ -829,9 +829,6 @@ a {
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 7px 0 18px
-    }
     .email {
         margin-top: 2px;
     }
@@ -856,7 +853,7 @@ a {
         gap: 0;
     }
     .hero-bg2 {
-        right: 6px;
+        right: 0;
         max-width: clamp(250px, 52vw, 399px);
     }
     .hero-content {
@@ -884,13 +881,12 @@ a {
         left: 6px;
     }
     .menu-header {
-        margin: 67px 2px 0 5px;
+        margin-top: 65px;
     }
     .title {
         margin-bottom: 36px;
     }
     .menu-box {
-        margin-left: 5px;
         gap: 20px 10px;
         margin-bottom: 99px;
     }
@@ -906,11 +902,16 @@ a {
     .subscribe {
         padding-top: 63px;
     }
+    .sub-form {
+        padding-left: 33px;
+        padding-top: 37px;
+    }
     .title.sub::before {
         top: -2px;
     }
     .title.sub {
         padding-top: 16px;
+        padding-left: 13px;
     }
     .title.about {
         font-size: clamp(26px, 5.5vw, 40px);
@@ -924,7 +925,6 @@ a {
         height: 357px;
     }
     .about-text {
-        margin-left: 4px;
         width: calc(49% - 40px);
     }
     .disc.about {
@@ -938,7 +938,7 @@ a {
         margin: 20px 34px 0 5px;
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        gap: 5px 10px;
+        gap: 5px 15px;
     }
     .add-wrapper:first-child {
         max-width: 65%;
@@ -995,7 +995,6 @@ a {
         padding: 0;
     }
     .logo.logo-footer {
-        margin: 0 0 0 5px;
         padding: 0;
     }
 }
@@ -1020,11 +1019,8 @@ a {
         width: auto;
     }
     .btn.hero {
-        margin: 0 auto 0 0;
-        width: 95%;
-    }
-    .menu-box {
-        grid-template-columns: repeat(2, 46vw);
+        margin: 0 auto;
+        width: 100%;
     }
     .sub-form > div {
         flex-basis: calc(100% - 180px - 20px);
@@ -1051,9 +1047,6 @@ a {
 }
 
 @media (max-width: 550px) {
-    .container {
-        padding: 0 7px 0 24px
-    }
     .header-wrapper {
         padding: 30px 0 41px 0;
     }
@@ -1075,22 +1068,21 @@ a {
         margin-top: 41px;
     }
     .menu-header {
-        margin: 77px 0 0 0;
+        margin: 76px 0 0 0;
     }
     .menu-date {
         font-size: 16px;
         line-height: 120%;
-        margin: 9px 0 0 0;
+        margin: 10px 0 0 0;
     }
     .title {
         margin-bottom: 18px;
     }
     .menu-box {
-        grid-template-columns: 95%;
+        grid-template-columns: 100%;
         grid-template-areas: "a" "d" "b" "e" "c" "f";
         grid-template-rows: repeat(6, 114px);
-        margin-left: 1px;
-        margin-bottom: 69px;
+        margin: 0 0 69px 0;
     }
     .menu-item {
         border: 1px solid rgba(var(--dark-rgb), 0.5);
@@ -1137,13 +1129,14 @@ a {
     }
     .btn.sub {
         margin: 31px auto 0 0;
-        width: 95%;
+        width: 100%;
     }
     .about-bg {
         display: none;
     }
     .about-text {
         width: 100%;
+        margin-left: 4px;
     }
     .about-wrapper {
         padding-top: 76px;
@@ -1157,7 +1150,7 @@ a {
         margin-right: 5px;
     }
     .btn.about {
-        width: 95%;
+        width: 100%;
         margin: 30px auto 0 0;
     }
     .about-add {
